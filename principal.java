@@ -1,17 +1,17 @@
 import java.util.Scanner;
 public class principal {
+    //modulo devuelve color aleatorio
     public static String colorAleatorio(){
         String color [] = {"Rojo", "Celeste"};
         return color[numAleatorio(0, color.length)];
     }
     
+    //modulo devuelve valor aleatorio en un rango dado por el max y minimo(1 a 10 para numeros, 0 a long de array para colores)
     public static int numAleatorio(int min, int max){
         int numero=0;
-        numero= (int)(Math.random()*(max-min)+min);//genera un numero aleatorio en un rango de diez numeros comenzando desde 1
+        numero= (int)(Math.random()*(max-min)+min);
         return numero;
     }
-
-
 
 
     public static void main(String []args){
@@ -37,7 +37,7 @@ public class principal {
         colorA1 = colorAleatorio();
         numA1 = numAleatorio(1, 11);
         colorB1 = colorAleatorio();
-        numB1=numAleatorio(0, 11);
+        numB1=numAleatorio(1, 11);
         System.out.println("----------------------------");
         System.out.println("Jugador/a: "+jugador1);
         System.out.println("Primer burbuja: "+colorA1 +" " +numA1);
