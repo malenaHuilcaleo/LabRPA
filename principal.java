@@ -23,23 +23,37 @@ public class principal {
         int numA1, numB1, puntos1;
 
         //variables para jugador 2
-        //String colorA2, colorB2;
-        //int numA2, numB2, puntos2;
+        String colorA2, colorB2;
+        int numA2, numB2, puntos2;
 
         System.out.println ("Bienvenido al juego burbujas!!");
+        System.out.println("");
         System.out.println("Ingrese el nombre del primer jugador");
         jugador1= teclado.nextLine();
         System.out.println("Ingrese nombre del segundo jugador");
         jugador2=teclado.nextLine();
 
-        //asignar numeros y colores a jugador 1
+        //asignar numeros y colores a jugador 1 y mostrar
         colorA1 = colorAleatorio();
         numA1 = numAleatorio(1, 11);
         colorB1 = colorAleatorio();
         numB1=numAleatorio(0, 11);
+        System.out.println("----------------------------");
+        System.out.println("Jugador/a: "+jugador1);
+        System.out.println("Primer burbuja: "+colorA1 +" " +numA1);
+        System.out.println("Segunda burbuja: " +colorB1 +" " +numB1);
+        System.out.println("----------------------------");
 
-        System.out.println("Primer burbuja: "+colorA1 +" "+numA1);
-        System.out.println("Segunda burbuja: " +colorB1 +" "+numB1);
+        //asignar numeros y colores a jugador 2 y mostrar
+        colorA2 = colorAleatorio();
+        numA2 = numAleatorio(1, 11);
+        colorB2 = colorAleatorio();
+        numB2=numAleatorio(0, 11);
+
+        System.out.println("Jugador/a: "+jugador2);
+        System.out.println("Primer burbuja: "+colorA2 +" " +numA2);
+        System.out.println("Segunda burbuja: " +colorB2 +" " +numB2);
+
 
     }
 
