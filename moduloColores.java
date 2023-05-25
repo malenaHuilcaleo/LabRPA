@@ -11,9 +11,10 @@ public static String colorAleatorio(){
     return color[generarNumAleatorio(0, color.length)];
 }
 
-public static int generarNumAleatorio(int min, int max){
+public static int generarNumAleatorio(int min, int max)// este modulo genera un numero aleatorio en un rango dado por los parametros max y min
+{
     int numero=0;
-    numero= (int)(Math.random()*(max-min)+min);//genera un numero aleatorio en un rango de diez numeros comenzando desde 1
+    numero= (int)(Math.random()*(max-min)+min);
     return numero;
 }
   
