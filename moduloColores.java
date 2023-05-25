@@ -9,7 +9,7 @@ public class moduloColores {
 
 public static String colorAleatorio(){
     String color [] = {"Rojo", "Celeste"};
-    return color[generarNumAleatorio(0, color.length -1)];
+    return color[generarNumAleatorio(0, color.length)];
 }
 
 public static int generarNumAleatorio(int min, int max)// este modulo genera un numero aleatorio en un rango dado por los parametros max y min
