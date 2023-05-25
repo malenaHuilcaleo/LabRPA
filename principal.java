@@ -1,16 +1,15 @@
 import java.util.Scanner;
 public class principal {
-    //modulo devuelve color aleatorio
-    public static String colorAleatorio(){
-        String color [] = {"Rojo", "Celeste"};
-        return color[numAleatorio(0, color.length)];
-    }
-    
     //modulo devuelve valor aleatorio en un rango dado por el max y minimo(1 a 10 para numeros, 0 a long de array para colores)
     public static int numAleatorio(int min, int max){
-        int numero=0;
+        int numero;
         numero= (int)(Math.random()*(max-min)+min);
         return numero;
+    }
+     //modulo devuelve color aleatorio
+     public static String colorAleatorio(){
+        String color [] = {"Rojo", "Celeste"};
+        return color[numAleatorio(0, color.length)];
     }
 
     //modulo devuelve puntaje
@@ -36,7 +35,7 @@ public class principal {
                 gan=j2;
             }
             else {
-                gan="ambos! fue un empate";
+                gan="¡ambos! fue un empate";
             }
         } 
        
@@ -77,7 +76,7 @@ public class principal {
         colorA2 = colorAleatorio();
         numA2 = numAleatorio(1, 11);
         colorB2 = colorAleatorio();
-        numB2=numAleatorio(0, 11);
+        numB2=numAleatorio(1, 11);
 
         System.out.println("Jugador/a: "+jugador2);
         System.out.println("Primer burbuja: "+colorA2 +" " +numA2);
@@ -94,7 +93,7 @@ public class principal {
         System.out.println("¡Resultados!");
         System.out.println("Jugador " +jugador1 +" obtuvo " +puntos1 +" puntos");
         System.out.println("Jugador " +jugador2 +" obtuvo " +puntos2 +" puntos");
-        System.out.println("El ganador es " +ganador +"felicitaciones");
+        System.out.println("El ganador es " +ganador +" felicitaciones");
 
 
 
