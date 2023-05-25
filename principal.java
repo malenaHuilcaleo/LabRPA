@@ -13,10 +13,39 @@ public class principal {
         return numero;
     }
 
+    //modulo devuelve puntaje
+    public static int calcPunto (String colorA, String colorB, int numA, int numB){
+        int puntaje;
+        if (colorA==colorB){
+            puntaje= numA+numB;
+        }
+        else{
+            puntaje=0;
+        } 
+        return puntaje;
+    }
+
+    public static String calcganador(int punt1, int punt2, String j1, String j2){
+        String gan;
+    
+        if (punt1 > punt2){
+            gan=j1;
+        }
+        else{
+            if(punt1 < punt2) {
+                gan=j2;
+            }
+            else {
+                gan="ambos! fue un empate";
+            }
+        } 
+       
+        return gan;
+    }
 
     public static void main(String []args){
         Scanner teclado = new Scanner(System.in);
-        String jugador1, jugador2;
+        String jugador1, jugador2, ganador;
 
         //variables para jugador 1
         String colorA1, colorB1;
@@ -53,6 +82,20 @@ public class principal {
         System.out.println("Jugador/a: "+jugador2);
         System.out.println("Primer burbuja: "+colorA2 +" " +numA2);
         System.out.println("Segunda burbuja: " +colorB2 +" " +numB2);
+        System.out.println("----------------------------");
+
+        //calculo de puntos 
+        puntos1 =calcPunto(colorA1, colorB1, numA1, numB1);
+        puntos2 = calcPunto(colorA2, colorB2, numA2, numB2);
+        ganador = calcganador(puntos1, puntos2, jugador1, jugador2);
+
+
+        //mostrar puntos
+        System.out.println("¡Resultados!");
+        System.out.println("Jugador " +jugador1 +" obtuvo " +puntos1 +" puntos");
+        System.out.println("Jugador " +jugador2 +" obtuvo " +puntos2 +" puntos");
+        System.out.println("El ganador es " +ganador +"felicitaciones");
+
 
 
     }
