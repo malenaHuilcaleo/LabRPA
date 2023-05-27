@@ -9,14 +9,25 @@ public class principal {
      //modulo devuelve color aleatorio
      public static String colorAleatorio(){
         int numColor;
-        numColor= numAleatorio(1, 3);
+        numColor= numAleatorio(1, 8);
         String color;
         switch(numColor) {
             case 1: color="Celeste";
             break;
             case 2: color= "Rojo";
             break;
+            case 3: color ="Celeste";
+            break;
+            case 4: color= "Rojo";
+            break;
+            case 5: color ="Comodin";
+            break;
+            case 6: color ="Rojo";
+            break;
+            case 7: color= "Celeste";
+            break;
             default: color ="error";
+            break;
         }  
         return color;
     }
@@ -24,7 +35,8 @@ public class principal {
     //modulo devuelve puntaje
     public static int calcPunto (String colorA, String colorB, int numA, int numB){
         int puntaje;
-        if (colorA==colorB){
+        if ((colorA==colorB) || (colorA== "Comodin")||(colorB=="Comodin"))
+        {
             puntaje= numA+numB;
         }
         else{
@@ -103,17 +115,5 @@ public class principal {
         System.out.println("Jugador " +jugador1 +" obtuvo " +puntos1 +" puntos");
         System.out.println("Jugador " +jugador2 +" obtuvo " +puntos2 +" puntos");
         System.out.println("El ganador es " +ganador +" felicitaciones");
-
-
-
-    }
-
-
-
-
-    
-
-
-
-    
+     }
 }
