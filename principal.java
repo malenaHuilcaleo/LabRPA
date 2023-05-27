@@ -8,8 +8,17 @@ public class principal {
     }
      //modulo devuelve color aleatorio
      public static String colorAleatorio(){
-        String color [] = {"Rojo", "Celeste"};
-        return color[numAleatorio(0, color.length)];
+        int numColor;
+        numColor= numAleatorio(1, 3);
+        String color;
+        switch(numColor) {
+            case 1: color="Celeste";
+            break;
+            case 2: color= "Rojo";
+            break;
+            default: color ="error";
+        }  
+        return color;
     }
 
     //modulo devuelve puntaje
