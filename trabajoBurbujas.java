@@ -3,13 +3,13 @@ public class trabajoBurbujas {
     //modulo devuelve valor aleatorio en un rango dado por el max y minimo
     public static int numAleatorio(int min, int max){
         int numero;
-        numero= (int)(Math.random()*(max-min )+min);
+        numero= (int)(Math.random()*(max-min +1 )+min);
         return numero;
     }
      //modulo devuelve color aleatorio
      public static String colorAleatorio(){
         int numColor;
-        numColor= numAleatorio(1, 3);
+        numColor= numAleatorio(1, 2);
         String color;
         if (numColor==1){
             color= "Celeste";}
@@ -33,7 +33,7 @@ public class trabajoBurbujas {
 
     public static int calcPunto (String colorA, String colorB, int numA, int numB, int com){
         int puntaje;
-        if (colorA==colorB) {
+        if (colorA.equals(colorB)) {
             if (numA==numB){
                 puntaje= ((numA+numB)*3+com);
             }
@@ -72,29 +72,29 @@ public class trabajoBurbujas {
 
         //asignar numeros y colores a jugador 1 
         colorA1 = colorAleatorio();
-        numA1 = numAleatorio(1, 101);
+        numA1 = numAleatorio(1, 100);
         colorB1 = colorAleatorio();
-        numB1=numAleatorio(1, 101);
+        numB1=numAleatorio(1, 100);
         comodinJug1 = comodin();
         puntaje1 = calcPunto(colorA1, colorB1, numA1, numB1, comodinJug1);
         //asignar numeros y colores a jugador 2 
         colorA2 = colorAleatorio();
-        numA2 = numAleatorio(1, 101);
+        numA2 = numAleatorio(1, 100);
         colorB2 = colorAleatorio();
-        numB2=numAleatorio(1, 101);
+        numB2=numAleatorio(1, 100);
         comodinJug2 = comodin();
         puntaje2 = calcPunto(colorA2, colorB2, numA2, numB2, comodinJug2);
         //resultados
         System.out.println("¡Resultados del juego!");
-        mostrarResultados(jugador2, colorA2, colorB2, numA2, numB2, comodinJug2, puntaje2);
         mostrarResultados(jugador1, colorA1, colorB1, numA1, numB1, comodinJug1, puntaje1);
+        mostrarResultados(jugador2, colorA2, colorB2, numA2, numB2, comodinJug2, puntaje2);
+        
         if (puntaje1 > puntaje2){
             System.out.println("¡El ganador es "+jugador1 +"!"); 
         }else if (puntaje1 < puntaje2){
-            System.out.println("¡El ganador es " +jugador2 +"!");;
+            System.out.println("¡El ganador es " +jugador2 +"!");
         }else{
-            System.out.println("¡Es un empate, mejor suerte para la proxima!");;
-        }
-       
+            System.out.println("¡Es un empate, mejor suerte para la proxima!");
+        } 
      }
 }
